@@ -1,0 +1,74 @@
+{
+  "build": {
+    "exclude": [
+      "**/*.map",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/.DS_Store",
+      "**/Thumbs.db"
+    ],
+    "include": [
+      "module.json",
+      "README.md",
+      "CHANGELOG.md",
+      "LICENSE",
+      "scripts/**",
+      "styles/**",
+      "templates/**",
+      "lang/**",
+      "packs/**",
+      "assets/**",
+      "data/**",
+      "fonts/**",
+      "icons/**",
+      "media/**",
+      "sounds/**",
+      "ui/**",
+      "vendor/**"
+    ],
+    "preBuild": [],
+    "sourceExclude": [
+      ".git/**",
+      ".github/template-sync-token*",
+      ".runyth-template-source/**",
+      "dist/**",
+      "node_modules/**",
+      "coverage/**",
+      ".nyc_output/**",
+      ".cache/**",
+      "*.log",
+      ".env",
+      ".env.*",
+      "**/.DS_Store",
+      "**/Thumbs.db"
+    ]
+  },
+  "module": {
+    "entryMode": "passthrough",
+    "kind": "runtime",
+    "publicApi": true,
+    "repository": "Runyth/foundry-module-template",
+    "systemNeutral": true
+  },
+  "runtimeKit": {
+    "managed": false
+  },
+  "schemaVersion": 1,
+  "template": {
+    "repository": "Runyth/foundry-module-template",
+    "source": true,
+    "version": "1.0.0"
+  },
+  "validation": {
+    "allowFindings": [],
+    "forbidPrivateFoundryApis": true,
+    "forbidSourceMaps": true,
+    "requireLocaleParity": true,
+    "requireRepositoryUrls": true,
+    "requireVersionParity": true,
+    "requiredLocales": [
+      "en",
+      "de"
+    ]
+  }
+}

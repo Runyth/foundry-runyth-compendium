@@ -1,0 +1,9 @@
+.runyth-module {
+  box-sizing: border-box;
+}
+
+.runyth-module *,
+.runyth-module *::before,
+.runyth-module *::after {
+  box-sizing: inherit;
+}
