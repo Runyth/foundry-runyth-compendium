@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+.nyc_output/
+.cache/
+.runyth-template-source/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

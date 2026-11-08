@@ -1,0 +1,31 @@
+{
+  "description": "Production repository template for Runyth Foundry VTT modules.",
+  "engines": {
+    "node": ">=22.13.0 <27"
+  },
+  "license": "MIT",
+  "name": "@runyth/foundry-module-template",
+  "packageManager": "npm@11.16.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Runyth/foundry-module-template.git"
+  },
+  "scripts": {
+    "adopt": "node tools/adopt-existing.mjs",
+    "audit": "node tools/audit-foundry.mjs",
+    "bootstrap": "node tools/bootstrap.mjs",
+    "build": "node tools/build.mjs",
+    "check": "node tools/check.mjs",
+    "format": "node tools/format.mjs --write",
+    "format:check": "node tools/format.mjs --check",
+    "release:assert": "node tools/assert-release-tag.mjs",
+    "template:sync": "node tools/template-sync.mjs",
+    "test": "node --test --test-reporter=spec",
+    "validate": "node tools/validate.mjs",
+    "verify:release": "node tools/verify-release.mjs",
+    "version:set": "node tools/set-version.mjs"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}

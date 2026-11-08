@@ -1,0 +1,51 @@
+name: Runyth Template Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 1 * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    if: github.repository != 'Runyth/foundry-module-template'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out module repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: module
+      - name: Check out Runyth template
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Runyth/foundry-module-template
+          ref: main
+          path: template
+      - name: Set up Node.js
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version-file: module/.node-version
+      - name: Apply managed template files
+        working-directory: module
+        run: node tools/template-sync.mjs --source ../template
+      - name: Create synchronization pull request
+        working-directory: module
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "No managed template changes."
+            exit 0
+          fi
+          branch="runyth/template-sync-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add --all
+          git commit -m "🔧 Prog: Synchronize Runyth repository standard"
+          git push --set-upstream origin "$branch"
+          gh pr create --base main --head "$branch" --title "🔧 Prog: Synchronize Runyth repository standard" --body "Applies centrally managed files from Runyth/foundry-module-template. Module-owned runtime code and content are not overwritten."
