@@ -11,10 +11,16 @@ The monthly and manually triggered workflow:
 3. applies only the declared managed platform files;
 4. merges common package scripts without deleting module dependencies or
    custom scripts;
-5. records the applied template version;
-6. commits the synchronized standard directly to the module's branch. Module
+5. runs the module quality gate so the synchronized state is verified before it
+   is committed;
+6. records the applied template version;
+7. commits the synchronized standard directly to the module's branch. Module
    repositories run with pull requests disabled, so the managed platform files
    are committed by the workflow bot instead of opened for review.
+
+Workflow pushes made with the repository token do not trigger further workflow
+runs, so the in-workflow gate is the authoritative check for synchronized
+commits. A separate automation token is unnecessary.
 
 Module-owned runtime code, data, manifest, README, changelog, license,
 module-specific documentation, and feature tests are never template-sync
