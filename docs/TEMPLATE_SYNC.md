@@ -14,9 +14,10 @@ The monthly and manually triggered workflow:
 5. runs the module quality gate so the synchronized state is verified before it
    is committed;
 6. records the applied template version;
-7. commits the synchronized standard directly to the module's branch. Module
-   repositories run with pull requests disabled, so the managed platform files
-   are committed by the workflow bot instead of opened for review.
+7. commits the synchronized standard directly to the module's branch. Template
+   synchronization does not require pull request review, so the managed
+   platform files are committed by the workflow bot regardless of whether a
+   module allows pull requests.
 
 Workflow pushes made with the repository token do not trigger further workflow
 runs, so the in-workflow gate is the authoritative check for synchronized
