@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
+// Runyth archive standard patch: set versions across module.json, package.json and the lockfile.
 import { readFile, writeFile } from "node:fs/promises";
 import { PROJECT_ROOT, readJson } from "./lib/project.mjs";
 import { stableJson } from "./lib/text.mjs";
@@ -9,19 +12,11 @@ const manifest = await readJson("module.json");
 const packageJson = await readJson("package.json");
 const lock = await readJson("package-lock.json");
 manifest.version = version;
-manifest.download = manifest.download.replace(/\/v[^/]+\/[^/]+$/u, `/v${version}/${manifest.id}-v${version}.zip`);
+manifest.download = `https://github.com/${manifest.url.replace("https://github.com/", "")}/releases/download/v${version}/${manifest.id}-v${version}-mod.zip`;
 packageJson.version = version;
 lock.version = version;
 if (lock.packages?.[""]) lock.packages[""].version = version;
 await writeFile(path.join(PROJECT_ROOT, "module.json"), stableJson(manifest));
 await writeFile(path.join(PROJECT_ROOT, "package.json"), stableJson(packageJson));
 await writeFile(path.join(PROJECT_ROOT, "package-lock.json"), stableJson(lock));
-
-const changelogPath = path.join(PROJECT_ROOT, "CHANGELOG.md");
-let changelog = await readFile(changelogPath, "utf8");
-if (!changelog.includes(`## [${version}]`)) {
-  const date = new Date().toISOString().slice(0, 10);
-  changelog = changelog.replace("## [Unreleased]\n", `## [Unreleased]\n\n## [${version}] - ${date}\n\n- Describe this release.\n`);
-  await writeFile(changelogPath, changelog);
-}
-console.log(`Set module version to ${version}.`);
+console.log(`Set module version to ${version}. Update CHANGELOG.md and packs/catalog.json content versions separately.`);

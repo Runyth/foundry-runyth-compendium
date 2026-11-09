@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
       - name: Set up Node.js
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
@@ -28,6 +29,8 @@ jobs:
       - name: Install dependencies
         run: npm ci --ignore-scripts
       - name: Verify tag and build
+        env:
+          GITHUB_REF_NAME: ${{ github.ref_name }}
         run: |
           npm run release:assert
           npm run check
@@ -35,7 +38,9 @@ jobs:
         uses: actions/attest@f7c74d28b9d84cb8768d0b8ca14a4bac6ef463e6 # v4.2.0
         with:
           subject-path: |
-            dist/*.zip
+            dist/*-mod.zip
+            dist/*-src.zip
+            dist/*-doc.zip
             dist/*-SHA256SUMS.txt
             dist/module.json
       - name: Publish GitHub release
@@ -43,7 +48,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: >-
           gh release create "${{ github.ref_name }}"
-          dist/*.zip
+          dist/*-mod.zip
+          dist/*-src.zip
+          dist/*-doc.zip
           dist/*-SHA256SUMS.txt
           dist/module.json
           dist/build-report.json
