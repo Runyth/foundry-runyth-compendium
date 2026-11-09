@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
-import { readFile } from "node:fs/promises";
-import { PROJECT_ROOT, readJson } from "./lib/project.mjs";
+import { readJson } from "./lib/project.mjs";
 
 const manifest = await readJson("module.json");
 const tag = process.env.GITHUB_REF_NAME ?? process.argv[2];

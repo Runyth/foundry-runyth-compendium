@@ -1,6 +1,6 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { PROJECT_ROOT, pathExists } from "./lib/project.mjs";
+import { PROJECT_ROOT, pathExists, walkFiles } from "./lib/project.mjs";
 import { stableJson } from "./lib/text.mjs";
 
 function sourceArgument() {
@@ -34,6 +34,12 @@ for (const entry of manifest.entries) {
     await rm(to, { recursive: true, force: true });
     await mkdir(path.dirname(to), { recursive: true });
     await cp(from, to, { recursive: true });
+  } else if (entry.mode === "sync-tree") {
+    for (const relativePath of await walkFiles(from)) {
+      const target = path.join(to, relativePath);
+      await mkdir(path.dirname(target), { recursive: true });
+      await cp(path.join(from, relativePath), target);
+    }
   } else if (entry.mode === "merge-package") {
     const sourcePackage = await json(from);
     const targetPackage = await json(to);
@@ -48,5 +54,9 @@ for (const entry of manifest.entries) {
 }
 const statePath = path.join(PROJECT_ROOT, ".runyth/template-state.json");
 const currentState = await pathExists(statePath) ? await json(statePath) : {};
-await writeFile(statePath, stableJson({ ...currentState, repository: sourceConfig.template.repository, version: sourceConfig.template.version, source: false, lastSync: new Date().toISOString() }));
+const appliedTemplate = { repository: sourceConfig.template.repository, version: sourceConfig.template.version };
+await writeFile(statePath, stableJson({ ...currentState, ...appliedTemplate, source: false, lastSync: new Date().toISOString() }));
+const targetConfigPath = path.join(PROJECT_ROOT, "runyth.config.json");
+const targetConfig = await json(targetConfigPath);
+await writeFile(targetConfigPath, stableJson({ ...targetConfig, template: { ...targetConfig.template, ...appliedTemplate } }));
 console.log(`Applied Runyth template ${sourceConfig.template.version}.`);

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
-// Runyth archive standard patch: emit -mod, -src and -doc archives with checksums.
+// Runyth archive standard: emit -mod, -src and -doc archives with checksums.
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { PROJECT_ROOT, readJson, walkFiles } from "./lib/project.mjs";
+import { PROJECT_ROOT, pathExists, readJson, walkFiles } from "./lib/project.mjs";
 import { matchesAny } from "./lib/glob.mjs";
 import { runCommand } from "./lib/process.mjs";
 import { sha256File } from "./lib/hash.mjs";
@@ -38,9 +38,8 @@ const sourceName = `${manifest.id}-v${manifest.version}-src.zip`;
 const documentationName = `${manifest.id}-v${manifest.version}-doc.zip`;
 const sourceRoot = `${manifest.id}-v${manifest.version}-src`;
 const documentationRoot = `${manifest.id}-v${manifest.version}-doc`;
-
 const installEntries = await Promise.all(installFiles.map(async (file) => ({ name: `${manifest.id}/${file}`, content: await readFile(path.join(PROJECT_ROOT, file)) })));
-if (!installFiles.length) throw new Error("The install plan selected no files.");
+if (!installEntries.length) throw new Error("The install plan selected no files.");
 await writeDeterministicZip(path.join(dist, installName), installEntries);
 
 const documentationFiles = [
@@ -62,12 +61,14 @@ const checksums = [];
 for (const name of checksumTargets) checksums.push(`${await sha256File(path.join(dist, name))}  ${name}`);
 await writeFile(path.join(dist, checksumName), `${checksums.join("\n")}\n`);
 
+const catalogPath = path.join(PROJECT_ROOT, "packs/catalog.json");
+const catalog = (await pathExists(catalogPath)) ? await readJson("packs/catalog.json") : null;
 const report = {
   schemaVersion: 1,
   moduleId: manifest.id,
   version: manifest.version,
-  contentVersion: (await readJson("packs/catalog.json")).version,
   templateVersion: config.template.version,
+  ...(catalog ? { contentVersion: catalog.version } : {}),
   installArchive: installName,
   sourceArchive: sourceName,
   documentationArchive: documentationName,
@@ -82,4 +83,4 @@ const report = {
 };
 await writeFile(path.join(dist, "build-report.json"), `${JSON.stringify(report, null, 2)}\n`);
 await rm(staging, { recursive: true, force: true });
-console.log(`Built ${installName}, ${sourceName}, and ${documentationName}.`);
+console.log(`Built ${installName}, ${sourceName} and ${documentationName}.`);

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
-// Runyth archive standard patch: set versions across module.json, package.json and the lockfile.
-import { readFile, writeFile } from "node:fs/promises";
-import { PROJECT_ROOT, readJson } from "./lib/project.mjs";
+// Runyth archive standard: set versions across module.json, package.json and the lockfile.
+import { writeFile } from "node:fs/promises";
+import { PROJECT_ROOT, pathExists, readJson } from "./lib/project.mjs";
 import { stableJson } from "./lib/text.mjs";
 import path from "node:path";
 
@@ -19,4 +19,5 @@ if (lock.packages?.[""]) lock.packages[""].version = version;
 await writeFile(path.join(PROJECT_ROOT, "module.json"), stableJson(manifest));
 await writeFile(path.join(PROJECT_ROOT, "package.json"), stableJson(packageJson));
 await writeFile(path.join(PROJECT_ROOT, "package-lock.json"), stableJson(lock));
-console.log(`Set module version to ${version}. Update CHANGELOG.md and packs/catalog.json content versions separately.`);
+const hasCatalog = await pathExists(path.join(PROJECT_ROOT, "packs/catalog.json"));
+console.log(`Set module version to ${version}. Update CHANGELOG.md${hasCatalog ? " and packs/catalog.json content versions" : ""} separately.`);

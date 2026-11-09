@@ -22,10 +22,6 @@
     },
     {
       "mode": "replace",
-      "path": ".github/dependabot.yml"
-    },
-    {
-      "mode": "replace",
       "path": ".github/pull_request_template.md"
     },
     {
@@ -125,11 +121,11 @@
       "path": "package.json"
     },
     {
-      "mode": "replace-tree",
+      "mode": "sync-tree",
       "path": "test/runyth"
     },
     {
-      "mode": "replace-tree",
+      "mode": "sync-tree",
       "path": "tools"
     }
   ],

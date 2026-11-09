@@ -51,9 +51,9 @@ if (!/^Runyth\/[A-Za-z0-9._-]+$/u.test(repository)) throw new Error("--repositor
 const repositoryUrl = `https://github.com/${repository}`;
 sourceManifest.url = repositoryUrl;
 sourceManifest.manifest = `${repositoryUrl}/releases/latest/download/module.json`;
-sourceManifest.download = `${repositoryUrl}/releases/download/v${sourceManifest.version}/${sourceManifest.id}-v${sourceManifest.version}.zip`;
-sourceManifest.readme = `${repositoryUrl}/blob/main/README.md`;
-sourceManifest.changelog = `${repositoryUrl}/blob/main/CHANGELOG.md`;
+sourceManifest.download = `${repositoryUrl}/releases/download/v${sourceManifest.version}/${sourceManifest.id}-v${sourceManifest.version}-mod.zip`;
+sourceManifest.readme = `${repositoryUrl}/blob/master/README.md`;
+sourceManifest.changelog = `${repositoryUrl}/blob/master/CHANGELOG.md`;
 sourceManifest.bugs = `${repositoryUrl}/issues`;
 await writeFile(path.join(PROJECT_ROOT, "module.json"), stableJson(sourceManifest));
 

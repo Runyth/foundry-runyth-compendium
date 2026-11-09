@@ -52,12 +52,13 @@ install-tree contract.
 
 Every module release produces:
 
-1. a ready-to-install versioned ZIP;
-2. a complete reproducible versioned source ZIP;
-3. SHA-256 checksums;
-4. the release `module.json` for Foundry updates;
-5. a machine-readable build report;
-6. GitHub artifact provenance when the hosting plan supports it.
+1. a ready-to-install versioned module archive (`-mod.zip`);
+2. a complete reproducible versioned source archive (`-src.zip`);
+3. a documentation archive (`-doc.zip`);
+4. SHA-256 checksums for all archives and the release manifest;
+5. the release `module.json` for Foundry updates;
+6. a machine-readable build report;
+7. GitHub artifact provenance when the hosting plan supports it.
 
 ## No private API fallback
 
