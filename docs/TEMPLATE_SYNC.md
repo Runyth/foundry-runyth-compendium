@@ -19,6 +19,9 @@ The monthly and manually triggered workflow:
    platform files are committed by the workflow bot regardless of whether a
    module allows pull requests.
 
+A run with no managed file changes commits nothing, so the recorded sync
+timestamp only advances together with real platform changes.
+
 Workflow pushes made with the repository token do not trigger further workflow
 runs, so the in-workflow gate is the authoritative check for synchronized
 commits. A separate automation token is unnecessary.

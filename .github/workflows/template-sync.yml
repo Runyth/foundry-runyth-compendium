@@ -39,7 +39,7 @@ jobs:
       - name: Commit synchronized standard
         working-directory: module
         run: |
-          if git diff --quiet; then
+          if git diff --quiet -- . ':(exclude).runyth/template-state.json'; then
             echo "No managed template changes."
             exit 0
           fi
