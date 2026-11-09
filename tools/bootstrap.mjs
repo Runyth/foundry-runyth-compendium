@@ -33,9 +33,9 @@ manifest.title = args.title;
 manifest.description = args.description;
 manifest.url = repositoryUrl;
 manifest.manifest = `${repositoryUrl}/releases/latest/download/module.json`;
-manifest.download = `${repositoryUrl}/releases/download/v${manifest.version}/${args.id}-v${manifest.version}.zip`;
-manifest.readme = `${repositoryUrl}/blob/main/README.md`;
-manifest.changelog = `${repositoryUrl}/blob/main/CHANGELOG.md`;
+manifest.download = `${repositoryUrl}/releases/download/v${manifest.version}/${args.id}-v${manifest.version}-mod.zip`;
+manifest.readme = `${repositoryUrl}/blob/master/README.md`;
+manifest.changelog = `${repositoryUrl}/blob/master/CHANGELOG.md`;
 manifest.bugs = `${repositoryUrl}/issues`;
 packageJson.name = `@runyth/${args.id}`;
 packageJson.description = args.description;
@@ -43,7 +43,7 @@ packageJson.repository.url = `git+${repositoryUrl}.git`;
 lock.name = packageJson.name;
 lock.packages[""].name = packageJson.name;
 config.template.source = false;
-config.template.repository = "Runyth/foundry-module-template";
+config.template.repository = "Runyth/template-foundry-module";
 config.module.kind = args.kind ?? "runtime";
 config.module.repository = args.repository;
 
@@ -60,7 +60,7 @@ for (const relativePath of ["lang/en.json", "lang/de.json"]) {
   await writeFile(fullPath, stableJson({ [localizationKey]: { ...values, Name: args.title } }));
 }
 
-const readme = `# ${args.title}\n\n${args.description}\n\n## Installation\n\nInstall the release ZIP through Foundry VTT or extract it into the Foundry \`Data/modules/\` directory.\n\n## Development\n\nThis repository follows the Runyth Foundry module standard. Run \`npm run check\` before submitting changes. See \`docs/REPOSITORY_STANDARD.md\` for repository and compatibility rules.\n\n## Releases\n\nEach release provides a ready-to-install module ZIP, a complete reproducible source ZIP, SHA-256 checksums, and the release manifest.\n`;
+const readme = `# ${args.title}\n\n${args.description}\n\n## Installation\n\nInstall the release ZIP through Foundry VTT or extract it into the Foundry \`Data/modules/\` directory.\n\n## Development\n\nThis repository follows the Runyth Foundry module standard. Run \`npm run check\` before submitting changes. See \`docs/REPOSITORY_STANDARD.md\` for repository and compatibility rules.\n\n## Releases\n\nEach release provides a ready-to-install module ZIP (\`-mod\`), a complete reproducible source ZIP (\`-src\`), a documentation ZIP (\`-doc\`), SHA-256 checksums, and the release manifest.\n`;
 await writeFile(path.join(PROJECT_ROOT, "README.md"), readme);
 await writeFile(path.join(PROJECT_ROOT, "module.json"), stableJson(manifest));
 await writeFile(path.join(PROJECT_ROOT, "package.json"), stableJson(packageJson));

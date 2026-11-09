@@ -1,6 +1,6 @@
 # Releasing
 
-1. Ensure `main` is clean and CI passes.
+1. Ensure `master` is clean and CI passes.
 2. Set the release version:
 
 ```nu
@@ -14,5 +14,5 @@ npm run check
 6. The release workflow rebuilds and verifies all assets, creates provenance
    attestations, and publishes a GitHub release.
 
-The tag, `module.json`, `package.json`, install archive, source archive, and
-release download URL must all agree on the version.
+The tag, `module.json`, `package.json`, the `-mod`, `-src` and `-doc` archives,
+and the release download URL must all agree on the version.
