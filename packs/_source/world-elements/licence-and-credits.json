@@ -1,0 +1,63 @@
+{
+  "_id": "c304000000000001",
+  "_key": "!journal!c304000000000001",
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "e4306c9bc9ea0b570bbbb4af22f3b564b984a40115b0022a20fde5b852efc0a2",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "licence-and-credits",
+      "kind": "journal",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "The source and content licence pair of the Compendium, and the credits behind it."
+    }
+  },
+  "folder": null,
+  "name": "Licence & Credits",
+  "ownership": {
+    "default": 0
+  },
+  "pages": [
+    {
+      "_id": "pg04010000000000",
+      "flags": {},
+      "name": "Licences",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 100,
+      "system": {},
+      "text": {
+        "content": "<h1>Licences</h1><p>The module's source code is licensed AGPL-3.0-or-later. The content records it ships (items, features, world elements, tables) are licensed CC BY-SA 4.0, and every record stamps its own licence in the module's flags.</p><p>Source code licence: AGPL-3.0-or-later. Content licence: CC BY-SA 4.0. The two licence fields are exclusive by policy: source stays AGPL, content stays CC BY-SA.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    },
+    {
+      "_id": "pg04020000000000",
+      "flags": {},
+      "name": "Credits",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 200,
+      "system": {},
+      "text": {
+        "content": "<h1>Credits</h1><p>Runyth Compendium is a Runyth project, authored for the Runyth fleet and for any Foundry world that wants company. Attribution for content reuse: Runyth, with a link to the module repository, shared under the same licence.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    }
+  ],
+  "sort": 400
+}

@@ -1,0 +1,25 @@
+{
+  "_id": "c205000000000001",
+  "_key": "!items!c205000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "a0bb71480d806745e2f9b184b2319d4b4805bb9ece79e3b3d14195333e3407b8",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "latchwise",
+      "kind": "feat",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "Doors show you their habits."
+    }
+  },
+  "folder": null,
+  "name": "Latchwise",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 500,
+  "type": "feat"
+}

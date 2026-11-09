@@ -1,15 +1,15 @@
 {
-  "description": "Production repository template for Runyth Foundry VTT modules.",
+  "description": "Runyth Compendium — system-agnostic custom items, features and world elements for any Foundry world, delivered as compendium packs through a thin wrapper module.",
   "engines": {
     "node": ">=22.13.0 <27"
   },
-  "license": "MIT",
-  "name": "@runyth/foundry-module-template",
+  "license": "AGPL-3.0-or-later",
+  "name": "runyth-compendium",
   "packageManager": "npm@11.16.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Runyth/foundry-module-template.git"
+    "url": "git+https://github.com/Runyth/foundry-runyth-compendium.git"
   },
   "scripts": {
     "adopt": "node tools/adopt-existing.mjs",
@@ -19,6 +19,8 @@
     "check": "node tools/check.mjs",
     "format": "node tools/format.mjs --write",
     "format:check": "node tools/format.mjs --check",
+    "packs:check": "node tools/module/build-packs.mjs --check",
+    "packs:rebuild": "node tools/module/build-packs.mjs --write",
     "release:assert": "node tools/assert-release-tag.mjs",
     "template:sync": "node tools/template-sync.mjs",
     "test": "node --test --test-reporter=spec",

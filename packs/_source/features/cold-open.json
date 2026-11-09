@@ -1,0 +1,25 @@
+{
+  "_id": "c204000000000001",
+  "_key": "!items!c204000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "f98e9628a6a6c3a732175feaa9b5d42aa5fe3f0173fd9c1c4cd7d2cde233a34c",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "cold-open",
+      "kind": "feat",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "You know how to enter a room the right way."
+    }
+  },
+  "folder": null,
+  "name": "Cold Open",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 400,
+  "type": "feat"
+}

@@ -1,89 +1,58 @@
-# Runyth Foundry Module Template
+# Runyth Compendium
 
-A production repository template for consistent Runyth Foundry VTT modules.
-It supports new modules, content libraries, framework modules, companion
-integrations, and conservative adoption of existing JavaScript modules.
+Runyth Compendium — system-agnostic custom items, features and world elements for any Foundry world, delivered as compendium packs through a thin wrapper module.
 
-## Create a module repository
+Install the module through the Foundry manifest URL below and every pack installs with it. The module ships content only: no scripts, no styles, no settings surface. The repository tooling builds the packs deterministically from source records and keeps every release reproducible.
 
-1. Mark this repository as a GitHub template.
-2. Create a new repository from it under the Runyth organization.
-3. Clone the new repository.
-4. Bootstrap its permanent identity:
+## Packs
 
-```text
-npm ci
-npm run bootstrap -- \
-  --id example-module \
-  --title "Example Module" \
-  --description "A concise module description." \
-  --repository Runyth/example-module \
-  --kind runtime
-npm run check
-```
+| Pack | Documents | What it carries |
+| --- | ---: | --- |
+| `armory` | 10 | Custom magic items (Porchlight Lantern, Coppermoor Sextant, Saltmarket Scale, …) |
+| `features` | 8 | Custom feats and abilities for any system that imports general features |
+| `world-elements` | 4 | Journal entries: usage guide, the Saltmarket Exchange, the Porchlight Compact, licences |
+| `tables` | 2 | d20 roll tables: Saltmarket Curiosities and Porchlight Nights |
 
-The backslashes above are documentation formatting, not a Nushell command. A
-Nushell-safe invocation is:
+The pack IDs (`runyth-compendium.armory` and siblings) and document UUIDs are permanent compatibility contracts, per the Runyth repository standard.
 
-```nu
-npm run bootstrap -- --id example-module --title "Example Module" --description "A concise module description." --repository Runyth/example-module --kind runtime
-```
+## System-agnostic core, system-specific companions
 
-## Adopt an existing module
+The packs are deliberately system-agnostic: records carry no `system` block at all, so they install and open in any world. Importing an Armory item gives your system a clean document it can fill with its own mechanics; world elements and tables work everywhere as-is.
 
-Create its new repository from this template, then run:
+Enriching records with real system mechanics is the job of a companion on the established Runyth strategy — the same shape as the system-neutral Runyth Tables of Sustenance and its D&D 5e 2024 companion. A future `runyth-compendium-dnd5e-2024` companion will ship its own tested packs and require this module; the core stays neutral and does not require any system or companion.
 
-```nu
-npm run adopt -- --source ../existing-module-source --apply
-npm run check
-```
+## Identity
 
-The adoption tool preserves the existing `module.json`, module IDs, flags,
-pack paths, runtime directories, documentation, and tests while refusing to
-overwrite centrally managed Runyth tooling. Review the generated adoption
-report before committing.
-
-## Standard commands
-
-| Command | Purpose |
+| Identity | Value |
 | --- | --- |
-| `npm run format` | Normalize JSON and text formatting |
-| `npm test` | Run Node's built-in test runner |
-| `npm run validate` | Validate manifest, paths, imports, localization, and repository policy |
-| `npm run audit` | Audit deprecated, private, and unsafe Foundry patterns |
-| `npm run build` | Create deterministic install and source ZIPs |
-| `npm run verify:release` | Verify archive roots, versions, contents, and checksums |
-| `npm run check` | Run the complete local quality gate |
-| `npm run version:set -- 1.2.3` | Update all authoritative version locations |
-| `npm run template:sync -- --source ../foundry-module-template` | Apply managed template updates locally |
+| Display title | `Runyth Compendium` |
+| Module ID | `runyth-compendium` |
+| Repository | `Runyth/foundry-runyth-compendium` |
+| Content version | `1.0.0` |
 
-## Release outputs
+## Installation
 
-A build writes these assets under `dist/`:
+Install the module through the Foundry manifest URL:
 
 ```text
-<module-id>-v<version>.zip
-<module-id>-v<version>-source.zip
-<module-id>-v<version>-SHA256SUMS.txt
-module.json
-build-report.json
+https://github.com/Runyth/foundry-runyth-compendium/releases/latest/download/module.json
 ```
 
-The installable archive always contains one non-versioned module root. The
-source archive contains one versioned source root and the complete repository,
-excluding generated, secret, and cache paths.
+## Development
 
-## Design boundaries
+Records are authored as JSON under `packs/_source/<pack>/` and compiled by `npm run packs:rebuild` into deterministic NeDB packs with a canonical content hash stamped in every record's module flags. `npm run check` verifies formatting, manifest and archive sanity, the packs and catalog, the module tests, and the release artifacts.
 
-- Existing runtime code can remain unchanged in passthrough mode.
-- Optional compile steps are declared in `runyth.config.json`.
-- Module-owned source and data are never overwritten by template sync.
-- Public Foundry and complementary-module APIs are preferred over private
-  imports or monkey patches.
-- A module's IDs, flags, settings, pack names, UUIDs, hooks, and public APIs are
-  compatibility contracts.
+This repository follows the Runyth Foundry module standard. Run `npm run check` before submitting changes. See `docs/REPOSITORY_STANDARD.md` for repository and compatibility rules.
 
-See `docs/REPOSITORY_STANDARD.md` and `docs/ADOPT_EXISTING_MODULE.md`.
+## Releases
+
+Each release provides the installable `-mod` archive, a complete `-src` source archive, a `-doc` documentation archive, SHA-256 checksums, and the release manifest. The tag, `module.json`, `package.json`, install archive, source archive, and release download URL all agree on the version.
+
+## Content licence
+
+Gameplay and homebrew content is `CC BY-SA 4.0`. State that licence in the README and on each content record the module ships — the pack compiler stamps `contentLicence: "CC BY-SA 4.0"` into every record's module flags, the source JSON under `packs/_source/` carries the same statement, and the **Licence & Credits** world element explains the pair to players. Do not copy official rules text into the Compendium; every record is original Runyth homebrew.
+
+The licence fields are exclusive: the source licence is `AGPL-3.0-or-later`, and the content licence is `CC BY-SA 4.0`.
 
 ## Licence
 Copyright © 2026  [Daniel Braniewski](https://brani.dev/)

@@ -1,0 +1,25 @@
+{
+  "_id": "c110000000000001",
+  "_key": "!items!c110000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "659635d107ed25a42c1cf97178f6ae390d17fa41f36d555e4128e7524120c009",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "pinehearth-saddlebag",
+      "kind": "item",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "A red-dyed saddlebag that keeps three days' rations fresh and one kettle warm."
+    }
+  },
+  "folder": null,
+  "name": "Pinehearth Saddlebag",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 1000,
+  "type": "item"
+}

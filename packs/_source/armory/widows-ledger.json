@@ -1,0 +1,25 @@
+{
+  "_id": "c103000000000001",
+  "_key": "!items!c103000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "f10cfb0169530e97228ef890966f902ded152f37564fd3745627b3ac39f61d05",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "widows-ledger",
+      "kind": "item",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "An iron-bound ledger that keeps track of honest debts and who owes whom."
+    }
+  },
+  "folder": null,
+  "name": "The Widow's Ledger",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 300,
+  "type": "item"
+}

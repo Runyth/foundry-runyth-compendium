@@ -1,0 +1,82 @@
+{
+  "_id": "c301000000000001",
+  "_key": "!journal!c301000000000001",
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "d65faa3a3addafb35112b006f3a0fcc34cd31debf36c4a3ac5a2f9af6e08c8fa",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "how-to-use",
+      "kind": "journal",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "What the Compendium ships, how it stays system-agnostic, and where the licence lives."
+    }
+  },
+  "folder": null,
+  "name": "How to Use Runyth Compendium",
+  "ownership": {
+    "default": 0
+  },
+  "pages": [
+    {
+      "_id": "pg01010000000000",
+      "flags": {},
+      "name": "The Compendium in any world",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 100,
+      "system": {},
+      "text": {
+        "content": "<h1>The Compendium in any world</h1><p>Runyth Compendium is a content library for Foundry Virtual Tabletop. Its packs are system-agnostic: they install and open in any world, whatever the game system underneath offers. Armory and Features carry Item documents without system-specific data; importing one gives your world's system a clean document to fill. World Elements are journal text; Tables are roll tables.</p><p>System-agnostic means deliberate: records carry no system block at all. A companion module, such as a D&D 5e 2024 companion, gives selected records real system fields with its own tested release.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    },
+    {
+      "_id": "pg01020000000000",
+      "flags": {},
+      "name": "Licence per record",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 200,
+      "system": {},
+      "text": {
+        "content": "<h1>Licence per record</h1><p>Every record in the Compendium is original Runyth homebrew content and is released under CC BY-SA 4.0. The licence is stamped on each record under the module's flags (contentLicence), and the text files in packs/_source carry the same statement. The module's source code around the content is AGPL-3.0-or-later; see LICENSE.</p><p>When you excerpt or adapt a record for your campaigns, share alike and attribute Runyth as the content's source.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    },
+    {
+      "_id": "pg01030000000000",
+      "flags": {},
+      "name": "Growing the Compendium",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 300,
+      "system": {},
+      "text": {
+        "content": "<h1>Growing the Compendium</h1><p>Records are authored as JSON under packs/_source and compiled by the repository tooling into deterministic NeDB packs, with a content hash stamped on each record. New records follow the naming and ID rules in this chapter's siblings, and every release of the Compendium publishes the whole set together.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    }
+  ],
+  "sort": 100
+}

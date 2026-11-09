@@ -1,0 +1,82 @@
+{
+  "_id": "c302000000000001",
+  "_key": "!journal!c302000000000001",
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "a6948ef373a595d7143546bcbc0e24b305052066013ebad733fa8815c5d60f3f",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "saltmarket-exchange",
+      "kind": "journal",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "A cosmopolitan trade hub where honest prices are enforced by brass and cordiality."
+    }
+  },
+  "folder": null,
+  "name": "The Saltmarket Exchange",
+  "ownership": {
+    "default": 0
+  },
+  "pages": [
+    {
+      "_id": "pg02010000000000",
+      "flags": {},
+      "name": "The Exchange floor",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 100,
+      "system": {},
+      "text": {
+        "content": "<h1>The Saltmarket Exchange</h1><p>The Exchange is a covered market of the kind any port, crossroads or planar bazaar can host: a floor of leased stalls, a wall of posted tariffs, and an office of weights. Nothing on the floor is genuinely new; everything is honestly described or conspicuously not.</p><p>Its law is short. Weigh with the house scale when challenged. Shout the price before the bargain, not after. A buyer who lies about what they bring to the table loses the table.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    },
+    {
+      "_id": "pg02020000000000",
+      "flags": {},
+      "name": "Brokers and wares",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 200,
+      "system": {},
+      "text": {
+        "content": "<h1>Brokers and wares</h1><p>Brokers rent their stall under the salt arch, where the roof sweats in winter and drips in summer. The most reliable brokers keep their own scales, and the scale that tips for a living is a broker's proudest keepsake.</p><p>The common wares: charters of passage, honest maps of dishonest places, cellar inventories of three dead merchants, and jars whose contents are exactly as labelled. The rare wares are the ones the Exchange refuses to describe and sells only by reputation.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    },
+    {
+      "_id": "pg02030000000000",
+      "flags": {},
+      "name": "Using the Exchange in your world",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 300,
+      "system": {},
+      "text": {
+        "content": "<h1>Using the Exchange in your world</h1><p>Drop the Exchange wherever trade needs a dirty floor and clean brass. The associated roll table, Saltmarket Curiosities, supplies one notable stall or rumour. The Saltmarket Scale in the Armory pack is the house scale of a broker who paid well for it.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    }
+  ],
+  "sort": 200
+}

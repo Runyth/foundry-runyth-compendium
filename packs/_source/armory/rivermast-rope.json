@@ -1,0 +1,25 @@
+{
+  "_id": "c105000000000001",
+  "_key": "!items!c105000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "0c977dd6c5d4cda27ef279d0db4aacc482d8ac2fce5b51a34e0cd99175b95948",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "rivermast-rope",
+      "kind": "item",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "Fifty measures of river-grade rope whose knots never slip and never rot."
+    }
+  },
+  "folder": null,
+  "name": "Rivermast Rope",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 500,
+  "type": "item"
+}

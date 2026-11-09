@@ -1,0 +1,25 @@
+{
+  "_id": "c207000000000001",
+  "_key": "!items!c207000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "19a4f07975aa170a6379f747ec74fa8380da3b536f6fe550953ebc7e49124741",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "weatherwise",
+      "kind": "feat",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "The sky files its paperwork with you."
+    }
+  },
+  "folder": null,
+  "name": "Weatherwise",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 700,
+  "type": "feat"
+}
