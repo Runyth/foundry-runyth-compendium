@@ -1,0 +1,300 @@
+{
+  "documentCount": 24,
+  "packs": [
+    {
+      "compendia": [
+        "runyth-compendium.armory"
+      ],
+      "contentKinds": [
+        "item"
+      ],
+      "description": "Canonical armory content of runyth-compendium.",
+      "entries": [
+        {
+          "id": "cairnsong-bell",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c108000000000001"
+          },
+          "title": "Cairnsong Bell",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c108000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "coppermoor-sextant",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c102000000000001"
+          },
+          "title": "Coppermoor Sextant",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c102000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "evergood-stitch-needle",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c107000000000001"
+          },
+          "title": "Evergood Stitch-Needle",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c107000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "kettlegrace-charm",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c104000000000001"
+          },
+          "title": "Kettlegrace Charm",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c104000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "pinehearth-saddlebag",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c110000000000001"
+          },
+          "title": "Pinehearth Saddlebag",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c110000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "porchlight-lantern",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c101000000000001"
+          },
+          "title": "Porchlight Lantern",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c101000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "rivermast-rope",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c105000000000001"
+          },
+          "title": "Rivermast Rope",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c105000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "saltmarket-scale",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c109000000000001"
+          },
+          "title": "Saltmarket Scale",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c109000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "signalveil-gloves",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c106000000000001"
+          },
+          "title": "Signalveil Gloves",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c106000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "widows-ledger",
+          "kind": "item",
+          "metadata": {
+            "documentId": "c103000000000001"
+          },
+          "title": "The Widow's Ledger",
+          "uuid": "Compendium.runyth-compendium.armory.Item.c103000000000001",
+          "version": "1.0.0"
+        }
+      ],
+      "id": "armory",
+      "title": "Runyth Compendium — Armory"
+    },
+    {
+      "compendia": [
+        "runyth-compendium.features"
+      ],
+      "contentKinds": [
+        "feat"
+      ],
+      "description": "Canonical features content of runyth-compendium.",
+      "entries": [
+        {
+          "id": "boltgrip",
+          "kind": "feat",
+          "metadata": {
+            "documentId": "c206000000000001"
+          },
+          "title": "Boltgrip",
+          "uuid": "Compendium.runyth-compendium.features.Item.c206000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "cold-open",
+          "kind": "feat",
+          "metadata": {
+            "documentId": "c204000000000001"
+          },
+          "title": "Cold Open",
+          "uuid": "Compendium.runyth-compendium.features.Item.c204000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "hearthprayer",
+          "kind": "feat",
+          "metadata": {
+            "documentId": "c208000000000001"
+          },
+          "title": "Hearthprayer",
+          "uuid": "Compendium.runyth-compendium.features.Item.c208000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "latchwise",
+          "kind": "feat",
+          "metadata": {
+            "documentId": "c205000000000001"
+          },
+          "title": "Latchwise",
+          "uuid": "Compendium.runyth-compendium.features.Item.c205000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "ledgerkeeper",
+          "kind": "feat",
+          "metadata": {
+            "documentId": "c201000000000001"
+          },
+          "title": "Ledgerkeeper",
+          "uuid": "Compendium.runyth-compendium.features.Item.c201000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "second-helpings",
+          "kind": "feat",
+          "metadata": {
+            "documentId": "c203000000000001"
+          },
+          "title": "Second Helpings",
+          "uuid": "Compendium.runyth-compendium.features.Item.c203000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "trailsmith",
+          "kind": "feat",
+          "metadata": {
+            "documentId": "c202000000000001"
+          },
+          "title": "Trailsmith",
+          "uuid": "Compendium.runyth-compendium.features.Item.c202000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "weatherwise",
+          "kind": "feat",
+          "metadata": {
+            "documentId": "c207000000000001"
+          },
+          "title": "Weatherwise",
+          "uuid": "Compendium.runyth-compendium.features.Item.c207000000000001",
+          "version": "1.0.0"
+        }
+      ],
+      "id": "features",
+      "title": "Runyth Compendium — Features"
+    },
+    {
+      "compendia": [
+        "runyth-compendium.world-elements"
+      ],
+      "contentKinds": [
+        "journal"
+      ],
+      "description": "Canonical world-elements content of runyth-compendium.",
+      "entries": [
+        {
+          "id": "how-to-use",
+          "kind": "journal",
+          "metadata": {
+            "documentId": "c301000000000001"
+          },
+          "title": "How to Use Runyth Compendium",
+          "uuid": "Compendium.runyth-compendium.world-elements.JournalEntry.c301000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "licence-and-credits",
+          "kind": "journal",
+          "metadata": {
+            "documentId": "c304000000000001"
+          },
+          "title": "Licence & Credits",
+          "uuid": "Compendium.runyth-compendium.world-elements.JournalEntry.c304000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "porchlight-compact",
+          "kind": "journal",
+          "metadata": {
+            "documentId": "c303000000000001"
+          },
+          "title": "The Porchlight Compact",
+          "uuid": "Compendium.runyth-compendium.world-elements.JournalEntry.c303000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "saltmarket-exchange",
+          "kind": "journal",
+          "metadata": {
+            "documentId": "c302000000000001"
+          },
+          "title": "The Saltmarket Exchange",
+          "uuid": "Compendium.runyth-compendium.world-elements.JournalEntry.c302000000000001",
+          "version": "1.0.0"
+        }
+      ],
+      "id": "world-elements",
+      "title": "Runyth Compendium — World Elements"
+    },
+    {
+      "compendia": [
+        "runyth-compendium.tables"
+      ],
+      "contentKinds": [
+        "table"
+      ],
+      "description": "Canonical tables content of runyth-compendium.",
+      "entries": [
+        {
+          "id": "porchlight-nights",
+          "kind": "table",
+          "metadata": {
+            "documentId": "c402000000000001"
+          },
+          "title": "Porchlight Nights",
+          "uuid": "Compendium.runyth-compendium.tables.RollTable.c402000000000001",
+          "version": "1.0.0"
+        },
+        {
+          "id": "saltmarket-curiosities",
+          "kind": "table",
+          "metadata": {
+            "documentId": "c401000000000001"
+          },
+          "title": "Saltmarket Curiosities",
+          "uuid": "Compendium.runyth-compendium.tables.RollTable.c401000000000001",
+          "version": "1.0.0"
+        }
+      ],
+      "id": "tables",
+      "title": "Runyth Compendium — Tables"
+    }
+  ],
+  "providerId": "runyth-compendium",
+  "schemaVersion": 1,
+  "version": "1.0.0"
+}

@@ -12,21 +12,17 @@
       "README.md",
       "CHANGELOG.md",
       "LICENSE",
-      "scripts/**",
-      "styles/**",
-      "templates/**",
-      "lang/**",
-      "packs/**",
-      "assets/**",
-      "data/**",
-      "fonts/**",
-      "icons/**",
-      "media/**",
-      "sounds/**",
-      "ui/**",
-      "vendor/**"
+      "packs/**"
     ],
-    "preBuild": [],
+    "preBuild": [
+      {
+        "args": [
+          "tools/module/build-packs.mjs",
+          "--check"
+        ],
+        "command": "node"
+      }
+    ],
     "sourceExclude": [
       ".git/**",
       ".github/template-sync-token*",
@@ -45,9 +41,9 @@
   },
   "module": {
     "entryMode": "passthrough",
-    "kind": "runtime",
-    "publicApi": true,
-    "repository": "Runyth/foundry-module-template",
+    "kind": "content",
+    "publicApi": false,
+    "repository": "Runyth/foundry-runyth-compendium",
     "systemNeutral": true
   },
   "runtimeKit": {
@@ -56,19 +52,16 @@
   "schemaVersion": 1,
   "template": {
     "repository": "Runyth/foundry-module-template",
-    "source": true,
+    "source": false,
     "version": "1.0.0"
   },
   "validation": {
     "allowFindings": [],
     "forbidPrivateFoundryApis": true,
     "forbidSourceMaps": true,
-    "requireLocaleParity": true,
+    "requireLocaleParity": false,
     "requireRepositoryUrls": true,
     "requireVersionParity": true,
-    "requiredLocales": [
-      "en",
-      "de"
-    ]
+    "requiredLocales": []
   }
 }

@@ -1,0 +1,25 @@
+{
+  "_id": "c104000000000001",
+  "_key": "!items!c104000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "3c7ea9d5c9ff55803cca033e07a3df9ebf6201ca8b92f46da4c1e0287ef68605",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "kettlegrace-charm",
+      "kind": "item",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "A crooked copper charm that keeps the kettle warm and the camp kindly."
+    }
+  },
+  "folder": null,
+  "name": "Kettlegrace Charm",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 400,
+  "type": "item"
+}

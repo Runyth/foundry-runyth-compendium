@@ -1,0 +1,25 @@
+{
+  "_id": "c106000000000001",
+  "_key": "!items!c106000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "1fe27f7ea3788fdac3f6e8d62d49fb847d031e83a52b591b27ea95a5a705b6d7",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "signalveil-gloves",
+      "kind": "item",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "Thin tradesman's gloves that fold hand-signs into legible spoke-signs of light."
+    }
+  },
+  "folder": null,
+  "name": "Signalveil Gloves",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 600,
+  "type": "item"
+}

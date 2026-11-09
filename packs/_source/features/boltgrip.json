@@ -1,0 +1,25 @@
+{
+  "_id": "c206000000000001",
+  "_key": "!items!c206000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "36785703efbcb70da369e0ae0a84e98fb522879a476616d1526f91eec8a73b4a",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "boltgrip",
+      "kind": "feat",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "Thrown things obey your fingers rather than gravity's moods."
+    }
+  },
+  "folder": null,
+  "name": "Boltgrip",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 600,
+  "type": "feat"
+}

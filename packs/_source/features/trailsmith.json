@@ -1,0 +1,25 @@
+{
+  "_id": "c202000000000001",
+  "_key": "!items!c202000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "d7c411f0439850012d526fd69ec8629c96e754c6638e873c7d54e3a2dd23b265",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "trailsmith",
+      "kind": "feat",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "Turn bad weather into a chore and bad terrain into a tool."
+    }
+  },
+  "folder": null,
+  "name": "Trailsmith",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 200,
+  "type": "feat"
+}

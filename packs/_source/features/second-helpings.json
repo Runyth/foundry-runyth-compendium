@@ -1,0 +1,25 @@
+{
+  "_id": "c203000000000001",
+  "_key": "!items!c203000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "f72f9814b487a706a93a37c4729fd1c1b0f3f9460c0e92e098a8f583d39e22a0",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "second-helpings",
+      "kind": "feat",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "Shared meals mend more than hunger."
+    }
+  },
+  "folder": null,
+  "name": "Second Helpings",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 300,
+  "type": "feat"
+}

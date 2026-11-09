@@ -1,0 +1,25 @@
+{
+  "_id": "c108000000000001",
+  "_key": "!items!c108000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "ffb89eeb730facf33698f5a9daa3300c458c806217f4fdfdaa7088207c1d3ca1",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "cairnsong-bell",
+      "kind": "item",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "A small green bell that rings itself near graves, gateways and forgotten waysides."
+    }
+  },
+  "folder": null,
+  "name": "Cairnsong Bell",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 800,
+  "type": "item"
+}

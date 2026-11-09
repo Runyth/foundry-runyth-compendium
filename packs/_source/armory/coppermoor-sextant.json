@@ -1,0 +1,25 @@
+{
+  "_id": "c102000000000001",
+  "_key": "!items!c102000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "0e92c7eb17dbf6e953c5c373442faca9e03a44c6888b523c9ce1426cdb8262ff",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "coppermoor-sextant",
+      "kind": "item",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "A mariner's sextant that refuses to name the same false harbour twice."
+    }
+  },
+  "folder": null,
+  "name": "Coppermoor Sextant",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 200,
+  "type": "item"
+}

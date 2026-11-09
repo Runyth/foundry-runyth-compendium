@@ -1,0 +1,82 @@
+{
+  "_id": "c303000000000001",
+  "_key": "!journal!c303000000000001",
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "633eb0a32a817ab7e89309c170ff63e28b38951beed4fe7a086539ab370e0e11",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "porchlight-compact",
+      "kind": "journal",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "A travellers' guild of shelter-keepers, lantern-tenders, and people who leave a light on."
+    }
+  },
+  "folder": null,
+  "name": "The Porchlight Compact",
+  "ownership": {
+    "default": 0
+  },
+  "pages": [
+    {
+      "_id": "pg03010000000000",
+      "flags": {},
+      "name": "The Compact",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 100,
+      "system": {},
+      "text": {
+        "content": "<h1>The Porchlight Compact</h1><p>The Compact is an arrangement older than most roads: keepers of wayhouses, monasteries, canal locks and lighthouses agree to light a lamp for arriving strangers and to pass travellers onward with a note of introduction. It has no masters, no dues, and no uniforms; it keeps a roster, a lantern token, and a stubborn etiquette.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    },
+    {
+      "_id": "pg03020000000000",
+      "flags": {},
+      "name": "Tokens and obligations",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 200,
+      "system": {},
+      "text": {
+        "content": "<h1>Tokens and obligations</h1><p>A member carries a lantern token, a cheap stamped brass charm. Showing a token to another keeper asks for shelter first and questions later. In return the member owes three duties: take the watch when offered, leave the shelter as you found it, and tell the truth about the road behind you.</p><p>Breaking an obligation does not expel a member; it flips the token, and a flipped token can only be righted by hosting the person you wronged.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    },
+    {
+      "_id": "pg03030000000000",
+      "flags": {},
+      "name": "Using the Compact in your world",
+      "ownership": {
+        "default": -1
+      },
+      "sort": 300,
+      "system": {},
+      "text": {
+        "content": "<h1>Using the Compact in your world</h1><p>Place hostelries and keepers along any route your players travel. The Porchlight Lantern in the Armory pack is a first-choice heirloom of Compact keepers; Hearthprayer in the Features pack is the small ritual a keeper teaches a promising guest.</p>",
+        "format": 1
+      },
+      "title": {
+        "level": 1,
+        "show": false
+      },
+      "type": "text"
+    }
+  ],
+  "sort": 300
+}

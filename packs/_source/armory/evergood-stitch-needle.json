@@ -1,0 +1,25 @@
+{
+  "_id": "c107000000000001",
+  "_key": "!items!c107000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "6558f90264bd022091db00990c4bdf040ed647592f44aa750635ecb13556d92a",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "evergood-stitch-needle",
+      "kind": "item",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "A steel needle that mends cloth, leather and canvas as though the tear never happened."
+    }
+  },
+  "folder": null,
+  "name": "Evergood Stitch-Needle",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 700,
+  "type": "item"
+}

@@ -1,0 +1,25 @@
+{
+  "_id": "c109000000000001",
+  "_key": "!items!c109000000000001",
+  "effects": [],
+  "flags": {
+    "runyth-compendium": {
+      "contentHash": "b30a9410a801a34a6b66fa9d84e539cebc9a7d4eedfcf24f4205bb0ac8477077",
+      "contentLicence": "CC BY-SA 4.0",
+      "contentVersion": "1.0.0",
+      "entryId": "saltmarket-scale",
+      "kind": "item",
+      "managed": true,
+      "provenance": "Runyth",
+      "schemaVersion": 1,
+      "summary": "A brass merchant's scale that tips when an offer is more than fair."
+    }
+  },
+  "folder": null,
+  "name": "Saltmarket Scale",
+  "ownership": {
+    "default": 0
+  },
+  "sort": 900,
+  "type": "item"
+}
