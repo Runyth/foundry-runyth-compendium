@@ -25,7 +25,6 @@
     ],
     "sourceExclude": [
       ".git/**",
-      ".github/template-sync-token*",
       ".runyth-template-source/**",
       "dist/**",
       "node_modules/**",
