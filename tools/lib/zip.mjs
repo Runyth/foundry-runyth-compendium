@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { deflateRawSync, inflateRawSync } from "node:zlib";
 import { writeFile, readFile } from "node:fs/promises";
 

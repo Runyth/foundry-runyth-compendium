@@ -37,7 +37,7 @@
       "path": ".github/workflows/template-sync.yml"
     },
     {
-      "mode": "replace",
+      "mode": "merge-ignore",
       "path": ".gitignore"
     },
     {
