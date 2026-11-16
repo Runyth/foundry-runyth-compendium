@@ -14,10 +14,9 @@ The monthly and manually triggered workflow:
 5. runs the module quality gate so the synchronized state is verified before it
    is committed;
 6. records the applied template version;
-7. commits the synchronized standard directly to the module's branch. Template
-   synchronization does not require pull request review, so the managed
-   platform files are committed by the workflow bot regardless of whether a
-   module allows pull requests.
+7. commits the synchronized standard directly to the module's branch. Pull
+   requests are disabled across the Runyth organization, so the workflow bot
+   always commits directly and no review step is involved.
 
 A run with no managed file changes commits nothing, so the recorded sync
 timestamp only advances together with real platform changes.
