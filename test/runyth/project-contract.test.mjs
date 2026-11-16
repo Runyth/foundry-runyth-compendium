@@ -8,8 +8,12 @@ test("template identity and version are internally consistent", async () => {
   const packageJson = await readJson("package.json");
   const config = await readJson("runyth.config.json");
   assert.equal(manifest.version, packageJson.version);
-  assert.equal(config.template.version, "1.1.0");
   assert.equal(typeof config.template.source, "boolean");
+  if (config.template.source) {
+    assert.equal(config.template.version, manifest.version);
+  } else {
+    assert.match(config.template.version, /^\d+\.\d+\.\d+$/u);
+  }
 });
 
 test("template synchronization targets the canonical template", async () => {
