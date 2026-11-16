@@ -14,16 +14,21 @@ The monthly and manually triggered workflow:
 5. runs the module quality gate so the synchronized state is verified before it
    is committed;
 6. records the applied template version;
-7. commits the synchronized standard directly to the module's branch. Pull
-   requests are disabled across the Runyth organization, so the workflow bot
-   always commits directly and no review step is involved.
+7. commits the synchronized standard directly to the module's branch through
+   GitHub's commit API. The commit is authored by `github-actions[bot]` and
+   signed by GitHub, so it shows as Verified without storing a signing key.
 
 A run with no managed file changes commits nothing, so the recorded sync
 timestamp only advances together with real platform changes.
 
-Workflow pushes made with the repository token do not trigger further workflow
-runs, so the in-workflow gate is the authoritative check for synchronized
-commits. A separate automation token is unnecessary.
+Commits created through the API with the repository token do not trigger
+further workflow runs, so the in-workflow gate is the authoritative check for
+synchronized commits. A separate automation token or signing secret is
+unnecessary.
+
+The commit API describes files as additions and deletions rather than pushing a
+tree. The sync tool therefore rejects file-mode changes, symlinks, submodules,
+and unresolved conflicts instead of silently dropping them.
 
 Module-owned runtime code, data, manifest, README, changelog, license,
 module-specific documentation, and feature tests are never template-sync
